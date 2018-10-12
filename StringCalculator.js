@@ -8,7 +8,11 @@ function Add(numbers){
 	}
 	else{
 		var splittedString = numbers.split(",");
-		var toRetrun = parseInt(splittedString[0], 10) + parseInt(splittedString[1], 10);
+		var toRetrun = 0;
+		splittedString.forEach(function(item, index, array){
+			toRetrun += parseInt(item, 10)
+		});
+		
 		return toRetrun.toString();
 
 	}
