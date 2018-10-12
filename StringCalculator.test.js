@@ -14,4 +14,8 @@ it("Returns the some of more thab two inputs", () => {
 it("Retrun the sum of iputs with new line", () => {
 	expect(Add("1,2\n3")).toBe("6");
 }); 
+it("Throw Error if numbers includes a nagetive number", () => {
+		expect(function(){Add("1,2,-3,\n4")}).toThrow(new Error("Negatives not allowed:-3,"));
+});
+
 
