@@ -24,7 +24,7 @@ function Add(numbers){
 			return toRetrun.toString();
 		}
 		else{
-			throw new Error(negatives);
+			throw new Error(negatives.slice(0, -1));
 		}
 	}
 
