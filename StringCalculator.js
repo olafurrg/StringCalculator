@@ -7,7 +7,15 @@ function Add(numbers){
 		return numbers;
 	}
 	else{
+		var delimiter;
+		if(numbers.includes("//")){
+			var indexof = numbers.indexOf('\n');
+			delimiter = numbers.substring(2, indexof);
+			numbers = numbers.slice(indexof+1);
+			numbers = numbers.replace(delimiter, ",");
+		}
 		var splittedString = numbers.split(/[',', '\n']+/);
+		console.log(splittedString);
 		var toRetrun = 0;
 		var negatives = "Negatives not allowed:";
 		var hasNegatives = false;
