@@ -7,7 +7,7 @@ function Add(numbers){
 		return numbers;
 	}
 	else{
-		var splittedString = numbers.split(",");
+		var splittedString = numbers.split(/[',', '\n']+/);
 		var toRetrun = 0;
 		splittedString.forEach(function(item, index, array){
 			toRetrun += parseInt(item, 10)
