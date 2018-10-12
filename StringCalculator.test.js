@@ -20,5 +20,8 @@ it("Throw Error if numbers includes a nagetive number", () => {
 it("Throw Error if numbers includes a nagetive number", () => {
 		expect(function(){Add("1,2,-3,\n4,-5")}).toThrow(new Error("Negatives not allowed:-3,-5"));
 });
+it("ignoring numbers over 1000", () => {
+		expect(Add("1,2000,3,\n4,5000")).toBe("8");
+});
 
 

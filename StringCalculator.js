@@ -16,8 +16,11 @@ function Add(numbers){
 				negatives += item +",";
 				hasNegatives = true;
 			}
-			else{
+			else if(parseInt(item, 10) < 1000){
 				toRetrun += parseInt(item, 10);
+			}
+			else{
+				//Do nothing
 			}
 		});
 		if(!hasNegatives){
