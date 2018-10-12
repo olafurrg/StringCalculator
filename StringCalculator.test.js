@@ -8,4 +8,7 @@ it("returns input if only one parameter", () => {
 it("Retruns the sum of two inputs", () => {
 	expect(Add("1,2")).toBe("3");
 });
+it("Returns the some of more thab two inputs", () => {
+	expect(Add("1,2,3")).toBe("6");
+})
 
